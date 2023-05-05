@@ -5,9 +5,12 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
+import TypeWriter from './TypeWriter';
+import { Avatar } from '@mui/material';
 
 function MainFeaturedPost(props) {
   const { post } = props;
+  
 
   return (
     <Paper
@@ -34,41 +37,47 @@ function MainFeaturedPost(props) {
         }}
       />
       <Grid container>
-        <Grid item md={5}>
-      <Box
+        <Grid item xs={12} md={6}>
+        <Box
             sx={{
+              display:"flex",
+              alignItems: 'center',
+              flexDirection:'column',
               position: 'relative',
-              p: { xs: 3, md: 6 },
-              pr: { md: 0 },
+              p: { xs: 1, sm: 2, md: 5 },
+              flexGrow: 3,
+
               
               
+      
             }}
           >
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-              {post.linkText}
-            </Typography>
+          <Avatar variant={"circular"} alt={post.imageText} src={post.srcText} style={{
+              width: 200,
+              height: 200,
+            }} />
         </Box>
-        </Grid>
-        <Grid item md={1}/>
-        <Grid item md={5}>
+        </Grid>   
+        <Grid item xs={12} md={6}>
           <Box
             sx={{
+              display:"flex",
               position: 'relative',
-              p: { xs: 3, md: 6 },
-              pr: { md: 0 },
-              
-              
+              alignItems: 'center',
+              flexDirection:'column',
+
+              p: { xs: 2, sm: 2 , md: 7}
             }}
           >
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography sx={{letterSpacing: 3, fontWeight: 500, fontFamily:"Helvetica" }} component="h1" variant="h3" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h6" color="inherit" paragraph>
+              <TypeWriter typeData={post.typeWriter} />
+            <Typography sx={{fontWeight: 'light', fontFamily:"Helvetica", }} variant="h6" color="grey.500" paragraph>
               {post.description}
-            </Typography>
+            </Typography> 
           </Box>
         </Grid>
-
       </Grid>
     </Paper>
   );

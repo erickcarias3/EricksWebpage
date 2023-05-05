@@ -1,9 +1,11 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import MainFeaturedPost from './MainFeaturedPost';
-import FeaturedPost from './FeaturedPost';
+import MainFeaturedPost from '../blog/MainFeaturedPost';
+import FeaturedPost from '../blog/FeaturedPost';
 import { Typography } from '@mui/material';
+import image from './ProfessionalHeadshot.jpg';
+
 
 
 const sections = [
@@ -16,12 +18,13 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Hello My Name is Erick Carias',
+  title: 'Erick Carias',
   description:
-    "I am a Software Enginer based in the greater Sacramento Area",
+    "Utilizing my background in technology to shape a better tomorrow.",
   image: 'https://source.unsplash.com/random',
-  imageText: 'main image description',
-  linkText: 'Insert Image',
+  imageText: 'HeadShot',
+  srcText: image,
+  typeWriter: '["Software Engineer", "Support Engineer", "Writer", "DJ & Music Creative"]',
 };
 
 const featuredPosts = [
@@ -63,7 +66,7 @@ const featuredPosts = [
 
 
 
-export default function Blog() {
+export default function HomeTemplate() {
   return (
 
         <main>

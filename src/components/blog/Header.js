@@ -6,11 +6,20 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import  GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MenuIcon from '@mui/icons-material/Menu';
+import Drawer from '@mui/material/Drawer';
 
 
 
 function Header(props) {
   const { sections, title } = props;
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+
 
   return (
     <React.Fragment>
@@ -47,6 +56,9 @@ function Header(props) {
         <IconButton href="https://www.linkedin.com/in/erickcarias3" target="_blank">
           <LinkedInIcon/>
         </IconButton>
+        <IconButton onClick={toggleDrawer(true)} target="_blank">
+          <MenuIcon/>
+        </IconButton>
       </Toolbar>
 
 
@@ -69,6 +81,15 @@ function Header(props) {
           </Link>
         ))}
       </Toolbar>
+
+      <Drawer
+        anchor="bottom"
+        open={open}
+        onClose={toggleDrawer(false)}
+
+      >
+        Hello
+      </Drawer>
     </React.Fragment>
   );
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import Blog from "../blog/Blog.js"
+import HomeTemplate from "./HomeTemplate.js"
 
 const Landingpage = () => {
   return (
     <div className="pa3">
         <div>   
-            <Blog/>
+            <HomeTemplate/>
         </div>
     </div>
   );

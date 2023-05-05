@@ -11,14 +11,20 @@ const Portfolio = () => {
             type:"coding",
             title:"Smart Brain",
             data: "A web application to identify faces in photos. Utilizing the clarifai API to provide the machine learning and an Express JS backend with multiple API end points",
-
+            image: "./src",
+            description: "Hello"
         }
         ,{
             id:2,
             type:"coding",
             title:"Logic Gate Simulator",
-            data: "An android application build to mimic the behavior of logic gates. A sandbox like enviorment for creative iBoxiduals"
+            data: "An android application build to mimic the behavior of logic gates. A sandbox like enviorment for creative iBoxiduals",
+            image: "./src",
+            description: "Hello"
+
+
         }
+
         ,{
             id:3,
             type:"music",
@@ -75,7 +81,7 @@ const Portfolio = () => {
             </Box>
             <Toolbar>
                 <Button onClick={() => handleListView("all")}>all</Button>
-                <Button onClick={() => handleListView("coding")}>coding</Button>
+                <Button onClick={() => handleListView("coding")}>software</Button>
                 <Button onClick={() => handleListView("music")}>music</Button>
             </Toolbar>
         </Box>

@@ -28,6 +28,7 @@ class App extends Component {
     const theme = createTheme({
       palette:{
         mode: 'dark',
+        
         background: {  
           //default: '#5A5A5A'    }
         }
