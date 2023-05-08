@@ -44,12 +44,10 @@ function MainFeaturedPost(props) {
               alignItems: 'center',
               flexDirection:'column',
               position: 'relative',
-              p: { xs: 1, sm: 2, md: 5 },
+              p: { xs: 6, md: 8 },
               flexGrow: 3,
 
-              
-              
-      
+            
             }}
           >
           <Avatar variant={"circular"} alt={post.imageText} src={post.srcText} style={{

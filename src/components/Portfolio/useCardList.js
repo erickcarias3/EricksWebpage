@@ -30,7 +30,7 @@ const useCardList = (initialState) => {
       >        
         {cards.map((item) => (
           <Box
-            sx={{p:3}}
+            sx={{p:2}}
           >
            <BasicCard title={item.title} description={item.data} />
           </Box>
