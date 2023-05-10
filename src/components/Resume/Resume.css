@@ -1,0 +1,53 @@
+.movementbox{
+    animation-name: movement-box;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    position: relative;
+    left: 0; 
+    right: 0; 
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+@keyframes movement-box {
+    from {
+      top: 40px;
+      
+      left: 600px;
+    }
+    to {
+      
+      top: 10px;
+      
+      left: 100px;
+    }
+  }
+
+  .container5 {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    padding: 10px;
+    background-color: #ccc;
+  }
+  
+  .ball5 {
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  .floating-image5{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  

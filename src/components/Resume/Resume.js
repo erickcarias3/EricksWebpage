@@ -1,3 +1,9 @@
+import javascriptImage from './ResumeImages/js.png';
+import htmlImage from './ResumeImages/html-5.png';
+import aiImage from './ResumeImages/ai.png';
+import sqlImage from './ResumeImages/sql-server.png';
+import pythonImage from './ResumeImages/python.png';
+import reactImage from './ResumeImages/react.png';
 import Grid2 from '@mui/material/Unstable_Grid2'; 
 import React from "react";
 import Card from '@mui/material/Card';
@@ -5,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import { Button, Grow, Paper, Slide } from '@mui/material';
 import { Box } from '@mui/system';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import Pong from './Pong';
 
 const Resume = () => {
 
@@ -14,6 +21,8 @@ const Resume = () => {
         link.href = "./ErickC_Resume.pdf";
         link.click();
       };
+
+    const images = [javascriptImage,htmlImage,aiImage,pythonImage,sqlImage,reactImage]
 
     const education = [
         {
@@ -61,6 +70,7 @@ const Resume = () => {
         <Box sx={{
             display: "flex",
             justifyContent: "space-between",
+        
         }}>
             <div>
                 <Typography variant="h5" color="inherit"  align='left'>
@@ -90,7 +100,8 @@ const Resume = () => {
                 borderWidth: "1px",
                 borderTopStyle: "solid",
                 borderBottomStyle: "solid",
-                borderColor: "gray"
+                borderColor: "gray",
+
             }}
             
         >
@@ -109,14 +120,22 @@ const Resume = () => {
                 </div>
             </Grow>
         </Box>
+        <Box sx={{ padding:"8px", paddingBottom:"1em"}} xs={12}>
         
-        <Paper>
-        <Grid2 container justifyContent="center" spacing={5} >
+        
+        <Grid2 container spacing={1} sx={{bgcolor: 'grey.900' , paddingBottom: "2em", paddingTop: "1em"}}>
+        
             <Grid2 xs={12} md={6} >
                 <Typography variant="h5" color="inherit" gutterBottom align='center'>
                         Education
                 </Typography>
-                <Grid2 xs={12} >
+                <Grid2 xs={12} sx={{                            
+                            display: "flex",
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
+                            alignContent: "center",
+                            gap: "25px",
+                            }}>
 
                     {education.map((item) => (
                         <Grow
@@ -128,44 +147,44 @@ const Resume = () => {
                         <Card 
                         sx={{
                             borderWidth: "1px",
-                            //borderBottomStyle: "solid", 
                             borderLeftStyle:"solid",
                             display: "flex",
                             flexDirection: 'row',
                             borderColor: "gray",
                             justifyContent: "space-between",
-                            p: 0.5,
+                            p: 2,
                             m: 0.5
                             }}
                         >
 
                            
-                            <Box                      
+                            <Box                 
                             sx={{
                             display: "flex",
                             flexDirection: 'column',
+                            justifyContent: "space-between",
+                            paddingLeft: 1.5
                             }}>
-                                <Typography  variant="h6" color="inherit" gutterBottom>
+                                <Typography  variant="h6"  gutterBottom >
                                     {item.college}
                                 </Typography>
                                 <Typography  variant="body2" color="inherit" gutterBottom sx={{ fontStyle: 'italic', color: "text.secondary" ,}}>
                                     {item.type}
                                 </Typography>
                             </Box>
-                            <Box sx ={{paddingRight: 5}}>
+                            <Box sx ={{paddingRight: 2}}>
                                 <Box
                                     sx={{
                                     mx: 'auto',
                                     width: 120,
                                     p: 2,
-                                    m: 1,
+                                    m: 0.5,
                                     bgcolor: (theme) =>
                                         theme.palette.mode === 'dark' ? '#101010' : 'grey.50',
                                     color: (theme) =>
                                         theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
                                     border: '1px solid',
-                                    borderColor: (theme) =>
-                                        theme.palette.mode === 'dark' ? 'grey.800' : 'grey.300',
+                                    borderColor: "blanchedalmond",
                                     borderRadius: 8,
                                     }}
                                 >
@@ -183,11 +202,18 @@ const Resume = () => {
                     
                 </Grid2>
             </Grid2>
-            <Grid2 xs={12} md={6} >
+            <Grid2 xs={12} md={6} xl>
                 <Typography variant="h5" color="inherit" gutterBottom align='center'>
                         Employment
                 </Typography>
-                <Grid2 xs={12} >
+                <Grid2 xs={12} sx={{                            
+                            display: "flex",
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
+                            alignContent: "center",
+                            gap: "25px",
+                            flexGrow: 1
+                            }}>
                     {employment.map((item) => (
                             <Grow
                             key={item.id}
@@ -198,13 +224,12 @@ const Resume = () => {
                             <Card 
                             sx={{
                                 borderWidth: "1px",
-                                //borderBottomStyle: "solid", 
                                 borderLeftStyle:"solid",
                                 display: "flex",
                                 flexDirection: 'row',
                                 borderColor: "gray",
                                 justifyContent: "space-between",
-                                p: 0.5,
+                                p: 2,
                                 m: 0.5
                                 }}
                             >
@@ -214,28 +239,28 @@ const Resume = () => {
                                 sx={{
                                 display: "flex",
                                 flexDirection: 'column',
+                                paddingLeft: 1.5
                                 }}>
-                                    <Typography  variant="h6" color="inherit" gutterBottom>
+                                    <Typography  variant="h6"  gutterBottom >
                                         {item.workplace}
                                     </Typography>
                                     <Typography  variant="body2" color="inherit" gutterBottom sx={{ fontStyle: 'italic', color: "text.secondary" ,}}>
                                         {item.type}
                                     </Typography>
                                 </Box>
-                                <Box sx ={{paddingRight: 5}}>
+                                <Box sx ={{paddingRight: 1}}>
                                     <Box
                                         sx={{
                                         mx: 'auto',
                                         width: 120,
                                         p: 2,
-                                        m: 1,
+                                        m: 0.5,
                                         bgcolor: (theme) =>
                                             theme.palette.mode === 'dark' ? '#101010' : 'grey.50',
                                         color: (theme) =>
                                             theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
                                         border: '1px solid',
-                                        borderColor: (theme) =>
-                                            theme.palette.mode === 'dark' ? 'grey.800' : 'grey.300',
+                                        borderColor: "blanchedalmond",
                                         borderRadius: 8,
                                         }}
                                     >
@@ -253,7 +278,32 @@ const Resume = () => {
                 </Grid2>
             </Grid2>
         </Grid2>
-        </Paper>
+        
+        </Box>
+        <Box 
+            sx={{
+                position: 'relative',
+                mb: 4,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                paddingTop: "2em",
+                paddingBottom: "2em",
+                borderWidth: "1px",
+                borderTopStyle: "solid",
+                borderBottomStyle: "solid",
+                borderColor: "gray",
+
+            }}
+            
+        >
+            <Typography variant="h2" color="inherit" gutterBottom sx={{ fontStyle: 'italic', color: "text.secondary" , textAlign:"center"}}>
+                Technical Skills
+            </Typography>
+            <Pong ballImages={images}/> 
+        </Box>         
+            
+        
     </Box>
     );
 }

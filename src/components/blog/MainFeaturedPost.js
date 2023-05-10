@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
-import TypeWriter from './TypeWriter';
 import { Avatar } from '@mui/material';
+import Typewriter from './Typewriter';
+import { PostAddSharp } from '@mui/icons-material';
 
 function MainFeaturedPost(props) {
   const { post } = props;
@@ -70,7 +70,8 @@ function MainFeaturedPost(props) {
             <Typography sx={{letterSpacing: 3, fontWeight: 500, fontFamily:"Helvetica" }} component="h1" variant="h3" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-              <TypeWriter typeData={post.typeWriter} />
+            <Typewriter texts={post.typeWriter} />
+              
             <Typography sx={{fontWeight: 'light', fontFamily:"Helvetica", }} variant="h6" color="grey.500" paragraph>
               {post.description}
             </Typography> 

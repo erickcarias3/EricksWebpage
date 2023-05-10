@@ -1,0 +1,56 @@
+.switchContainer{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    background-color: gainsboro;
+    padding: 8em;
+    padding-bottom: 15em;
+    border-radius: 40px;
+    overflow: hidden;
+  }
+  
+  .ball2 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: sticky;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container2 {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .ball2 {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 900px) {
+    .container2 {
+      justify-content: space-between;
+    }
+  }
+  
+  @media screen and (min-width: 901px) {
+    .container2 {
+      justify-content: space-around;
+    }
+  }
