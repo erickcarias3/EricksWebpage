@@ -41,7 +41,7 @@ const Typewriter = ({ texts }) => {
     }, []);
   
     return (
-        <Typography sx={{fontWeight: 'light', fontFamily: "sans-seric", letterSpacing: 5, }} component="h1" variant="h4" color="inherit" gutterBottom>
+        <Typography sx={{ display:"flex", alignItems: 'center', fontWeight: 'light', fontFamily: "sans-seric", letterSpacing: 5, }} component="h1" variant="h4" color="inherit" >
             {displayText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
         </Typography>

@@ -7,11 +7,14 @@ import BasicCard from './BasicCard';
 
 
 const useCardList = (initialState) => {
+
+
   const [cards, setCards] = useState(initialState);
 
   const handleStateChange = (newState) => {
     setCards(newState);
   };
+
 
   return {
     cards,
@@ -28,16 +31,18 @@ const useCardList = (initialState) => {
 
         }}
       >        
-        {cards.map((item) => (
+        {cards.map((item,index) => (
           <Box
+            key={index}
             sx={{p:2}}
           >
-           <BasicCard title={item.title} description={item.data} />
+           <BasicCard  title={item.title} description={item.data} technologyChips={item.technologyChips} />
           </Box>
         ))}
       </Box>
     
   };
 };
+
 
 export default useCardList;

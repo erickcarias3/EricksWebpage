@@ -67,12 +67,13 @@ function MainFeaturedPost(props) {
               p: { xs: 2, sm: 2 , md: 7}
             }}
           >
-            <Typography sx={{letterSpacing: 3, fontWeight: 500, fontFamily:"Helvetica" }} component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography sx={{letterSpacing: 3, fontWeight: 500, fontFamily:"Helvetica" }} component="h1" variant="h3" color="inherit" >
               {post.title}
             </Typography>
-            <Typewriter texts={post.typeWriter} />
-              
-            <Typography sx={{fontWeight: 'light', fontFamily:"Helvetica", }} variant="h6" color="grey.500" paragraph>
+            <Box sx={{ display:"flex", alignItems: 'center', justifyContent:"center", flexDirection:'column', width: { xs: "105%", md: "120%"}, height: 85}} >
+              <Typewriter texts={post.typeWriter} />
+            </Box>
+            <Typography sx={{fontWeight: 'light', fontFamily:"Helvetica",}} variant="h6" color="grey.500" paragraph >
               {post.description}
             </Typography> 
           </Box>

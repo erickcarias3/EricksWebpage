@@ -8,12 +8,12 @@ import {BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode >
-    <body id="body" >
+    
     <BrowserRouter>
       <App/>
       {console.log()}
     </BrowserRouter>
-    </body>
+   
 
   </React.StrictMode>
 );

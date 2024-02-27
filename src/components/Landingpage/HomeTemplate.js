@@ -24,7 +24,7 @@ const mainFeaturedPost = {
   image: 'https://source.unsplash.com/random',
   imageText: 'HeadShot',
   srcText: image,
-  typeWriter: ["Software Engineer", "Support Engineer", "Writer", "DJ & Music Creative"],
+  typeWriter: ["Software Engineer", "Support Engineer", "Writer", "DJ & Musician"],
 };
 
 const featuredPosts = [

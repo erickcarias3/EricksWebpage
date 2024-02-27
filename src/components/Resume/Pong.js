@@ -81,7 +81,6 @@ function Ball({  index, containerRef, image, isMoving }) {
 }
 
 
-
 function Pong({ballImages}) {
   const containerRef = useRef(null);
   const [isMoving, setIsMoving] = useState(true);
@@ -91,7 +90,6 @@ function Pong({ballImages}) {
     <div>
       <div className="switchContainer" >
           <Switch
-            size='large'
             checked={isMoving}
             onChange={() => setIsMoving(!isMoving)}
             name="Toggle"

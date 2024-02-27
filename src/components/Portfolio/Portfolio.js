@@ -12,7 +12,8 @@ const Portfolio = () => {
             title:"Smart Brain",
             data: "A web application to identify faces in photos. Utilizing the clarifai API to provide the machine learning and an Express JS backend with multiple API end points",
             image: "./src",
-            description: "Hello"
+            description: "Hello",
+            technologyChips: ["React","Clarifai API","SQL","Node js"],
         }
         ,{
             id:2,
@@ -20,26 +21,36 @@ const Portfolio = () => {
             title:"Logic Gate Simulator",
             data: "An android application build to mimic the behavior of logic gates. A sandbox like enviorment for creative iBoxiduals",
             image: "./src",
-            description: "Hello"
-
-
+            description: "Hello",
+            technologyChips: ["React","Clarifai API","SQL","Node js"]
         }
-
+        
         ,{
             id:3,
             type:"Music",
-            data: "DJ Mix"
+            title:"DJ Mix",
+            data: "",
+            image: "./src",
+            description: "None",
+            technologyChips: ["Serato"]
         }
         ,{
             id:4,
-            type:"Music",
-            data: "DJ Mix"
+            title:"DJ Mix",
+            data: "",
+            image: "./src",
+            description: "None",
+            technologyChips: ["Serato"]
         }
         ,{
             id:5,
-            type:"Music",
-            data: "DJ Mix"
+            title:"DJ Mix",
+            data: "",
+            image: "./src",
+            description: "None",
+            technologyChips: ["Serato"]
         }
+        
     ]
     
     const options = [
